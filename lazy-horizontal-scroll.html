@@ -1,13 +1,12 @@
 <link rel="import" href="../polymer/polymer.html">
+<script src="../lazyloadxt/dist/jqlight.lazyloadxt.min.js" ></script>
+<script src="../lazyloadxt/dist/jquery.lazyloadxt.js"></script>
 <!--
   `<lazy-horizontal-scroll></lazy-horizontal-scroll>` # Lazy Horizontal Scroll
   @demo demo.html
 -->
 <dom-module id="lazy-horizontal-scroll">
   <template>
-    <script src="../lazyloadxt/dist/jqlight.lazyloadxt.min.js" ></script>
-    <script src="../lazyloadxt/dist/jquery.lazyloadxt.js"></script>
-    
     <style>
       :host {max-width:100%}
       :host .wrapper {overflow-x: scroll;overflow-y: hidden;white-space: nowrap}
@@ -22,7 +21,7 @@
   Polymer({
     is: "lazy-horizontal-scroll",
     ready: function(undefined){
-      window.jQuery.lazyLoadXT.scrollContainer = '.wrapper'
+      $.lazyLoadXT.scrollContainer = '.wrapper'
     },
   })
 </script>
