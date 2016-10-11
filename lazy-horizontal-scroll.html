@@ -21,13 +21,23 @@
 <script>
   Polymer({
     is: "lazy-horizontal-scroll",
-    ready: function(){
-      if (this.selector) {
+    properties:{
+      selector:{
+        value:"img[data-src]",
+        type:String,
+      },
+      lazyLoadXT:{
+        computed:"getLazyLoadXT(selector)",
+      },
+    },
+    getLazyLoadXT: function(selector){
+      if (selector) {
         $.extend($.lazyLoadXT, {
-          selector: this.selector
+          selector: selector
         })
       } 
       $.lazyLoadXT.scrollContainer = '.wrapper'
+      this.$$(selector).lazyLoadXT()
     },
   })
 </script>
