@@ -9,7 +9,9 @@
   <body>
     <h3>lazy-horizontal-scroll Demo</h3>
     <lazy-horizontal-scroll>
-      <img src="http://lorempixel.com/300/200/food/1" width="300" height="200" src="http://lorempixel.com/300/200/food/1" class="lazy-loaded"><img data-src="http://lorempixel.com/300/200/food/2" width="300" height="200" src="http://lorempixel.com/300/200/food/2" class="lazy-loaded"><img data-src="http://lorempixel.com/300/200/food/3" width="300" height="200" src="http://lorempixel.com/300/200/food/3" class="lazy-loaded"><img data-src="http://lorempixel.com/300/200/food/4" width="300" height="200" src="http://lorempixel.com/300/200/food/4" class="lazy-loaded"><img data-src="http://lorempixel.com/300/200/food/5" width="300" height="200" src="http://lorempixel.com/300/200/food/5" class="lazy-loaded"><img data-src="http://lorempixel.com/300/200/food/6" width="300" height="200" src="http://lorempixel.com/300/200/food/6" class="lazy-loaded"><img data-src="http://lorempixel.com/300/200/food/7" width="300" height="200" src="http://lorempixel.com/300/200/food/7" class="lazy-loaded"><img data-src="http://lorempixel.com/300/200/food/8" width="300" height="200" src="http://lorempixel.com/300/200/food/8" class="lazy-loaded"><img data-src="http://lorempixel.com/300/200/food/9" width="300" height="200" src="http://lorempixel.com/300/200/food/9" class="lazy-loaded"><img data-src="http://lorempixel.com/300/200/food/10" width="300" height="200" src="http://lorempixel.com/300/200/food/10" class="lazy-loaded">
+      <template is="dom-repeat" items="[1,2,3,4,5,6,7,8,9,10]">
+        <iron-image data-src$="http://lorempixel.com/300/200/food/[[item]]" width="300" height="200"></iron-image>
+      </template>
     </lazy-horizontal-scroll>
   </body>
 </html>
