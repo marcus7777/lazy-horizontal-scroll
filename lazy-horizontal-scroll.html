@@ -22,6 +22,11 @@
   Polymer({
     is: "lazy-horizontal-scroll",
     ready: function(){
+      if (this.selector) {
+        $.extend($.lazyLoadXT, {
+          selector: this.selector
+        })
+      } 
       $.lazyLoadXT.scrollContainer = '.wrapper'
     },
   })
