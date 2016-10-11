@@ -31,13 +31,9 @@
       },
     },
     getLazyLoadXT: function(selector){
-      if (selector) {
-        $.extend($.lazyLoadXT, {
-          selector: selector
-        })
-      } 
       $.lazyLoadXT.scrollContainer = '.wrapper'
-      this.$$(selector).lazyLoadXT()
+      $.lazyLoadXT.selector = selector
+      return $.lazyLoadXT
     },
   })
 </script>
